@@ -2,15 +2,32 @@
 Test Automation in Typescript with Cypress
 
 
-# Setup
+## Setup
 
-## Install Node
-install node.js and npm from https://nodejs.org/en/download/
-check it worked:
+### Node
+install node.js and npm from https://nodejs.org/en/download/ 
 
-    node -v
-    npm -v
+verify:
 
-## Setup Typesctipt
-    npm install -g ts-node
-    ts-node src/try.ts
+> node -v
+
+> npm -v
+
+### Typesctipt
+> npm install -g ts-node
+
+verify:
+> ts-node src/try.ts
+
+### Cypress
+> npm install cypress --save-dev    
+
+
+## Run tests
+> npx cypress open
+    
+choose E2E testing
+
+choose Chrome
+
+click on test(s) to run

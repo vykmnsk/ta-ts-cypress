@@ -4,8 +4,9 @@
   "private": true,
   "description": "",
   "license": "UNLICENSED",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "17.0.31",
+    "cypress": "^12.17.4",
     "typescript": "^5.2.2"
   }
 }
