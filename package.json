@@ -1,0 +1,11 @@
+{
+  "name": "ta-ts-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@types/node": "17.0.31",
+    "typescript": "^5.2.2"
+  }
+}
