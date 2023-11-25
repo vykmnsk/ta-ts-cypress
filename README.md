@@ -4,7 +4,7 @@ Test Automation in Typescript with Cypress
 
 ## Setup
 
-### Node
+#### Node
 install node.js and npm from https://nodejs.org/en/download/ 
 
 verify:
@@ -13,17 +13,23 @@ verify:
 
 > npm -v
 
-### Typesctipt
+#### Typesctipt
 > npm install -g ts-node
 
 verify:
 > ts-node src/try.ts
 
-### Cypress
-> npm install cypress --save-dev    
+#### Cypress tests
+> npm install    
 
 
-## Run tests
+## Run
+
+#### via __CLI__: single test in *headless* mode
+
+> npx cypress run --spec [path/to/spec-filename].cy.ts
+
+#### via __Cypress UI__ in a browser (*Chrome*)
 > npx cypress open
     
 choose E2E testing
