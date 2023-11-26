@@ -1,35 +1,35 @@
-# ta-ts-cypress
-Test Automation in Typescript with Cypress
+# Test Automation in Typescript with Cypress
 
 
 ## Setup
 
-#### Node
-install node.js and npm from https://nodejs.org/en/download/ 
-
-verify:
+### Node
+Install node.js and npm from https://nodejs.org/en/download/ and verify:
 
 > node -v
 
 > npm -v
 
-#### Typesctipt
-> npm install -g ts-node
 
-verify:
-> ts-node src/try.ts
-
-#### Cypress tests
+### Cypress tests
 > npm install    
 
 
 ## Run
 
-#### via __CLI__: single test in *headless* mode
+### headless
 
-> npx cypress run --spec [path/to/spec-filename].cy.ts
+all tests
 
-#### via __Cypress UI__ in a browser (*Chrome*)
+> npx cypress run --spec cypress/e2e/*
+
+a specific test (e.g. *homepage*)
+
+> npx cypress run --spec cypress/e2e/homepage.cy.ts
+
+
+### in a browser (e.g. *Chrome*)
+
 > npx cypress open
     
 choose E2E testing
