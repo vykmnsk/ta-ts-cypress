@@ -10,7 +10,7 @@ describe('Search', () => {
     cy.url().should('include', '/catalogsearch/result/?q=');
 
     const expectedTitle = `Search results for: '${criteria}'`;
-    const normText = (t) => t.trim().toLocaleLowerCase();
+    const normText = (t: string) => t.trim().toLocaleLowerCase();
 
     cy.title().should(($text) => {
       expect(normText($text)).to.equal(normText(expectedTitle));
