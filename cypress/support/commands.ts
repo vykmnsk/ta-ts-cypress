@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+import { page } from "./page-elements";
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -43,7 +46,8 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Cypress {
     interface Chainable<Subject> {
-      visitUrl(pageName: string): void;
+      visitUrl(pageName: string): void
+      verifyProducts(): Chainable<Element>
     }
   }
 }
@@ -51,6 +55,17 @@ declare global {
 Cypress.Commands.add('visitUrl', (pageName) => {
   cy.visit(`${BASE_URL}/${pageName}`)
 });
+
+Cypress.Commands.add('verifyProducts', () => {
+  cy.get(page.products).then(($products) => {
+    expect($products).to.have.length.at.least(1);
+    $products.each(($_, $prod) => {
+      cy.wrap($prod).find(page.product.name).should('have.length', 1);
+      // cy.wrap($prod).find(page.product.price).should('have.length', 1);
+    })
+  });
+});
+
 
 export { }
 

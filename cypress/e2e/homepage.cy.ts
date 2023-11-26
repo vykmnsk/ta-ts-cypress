@@ -18,13 +18,7 @@ describe('Homepage', () => {
 
   it('contains hot sellers', () => {
     cy.get(home.hotSellers.title).should('have.text', 'Hot Sellers');
-    cy.get(page.products).then(($products) => {
-      expect($products).to.have.length.at.least(1);
-      $products.each(($_, $prod) => {
-        cy.wrap($prod).find(page.product.name).should('have.length', 1);
-        cy.wrap($prod).find(page.product.price).should('have.length', 1);;
-      })
-    })
+    cy.verifyProducts();
   })
 
   it('contains footer links', () => {

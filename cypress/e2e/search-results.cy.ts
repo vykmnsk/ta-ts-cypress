@@ -23,13 +23,7 @@ describe('Search Results', () => {
   })
 
   it('finds existing products', () => {
-    cy.get(page.products).then(($products) => {
-      expect($products).to.have.length.at.least(1);
-      $products.each(($_, $prod) => {
-        cy.wrap($prod).find(page.product.name).should('have.length', 1);
-      })
-    })
-
+    cy.verifyProducts();
   })
 
 })
