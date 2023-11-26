@@ -12,7 +12,7 @@ describe('Search Suggestions', () => {
         }
       ).as('suggestions')
 
-      cy.visitPage('');
+      cy.visitUrl('');
 
       cy.log('typing search criteria...');
 
