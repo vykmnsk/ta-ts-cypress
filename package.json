@@ -7,8 +7,15 @@
   "devDependencies": {
     "@types/node": "17.0.31",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
     "cypress": "^12.17.4",
+    "eslint": "^8.54.0",
     "eslint-plugin-cypress": "^2.15.1",
     "typescript": "^5.2.2"
+  },
+
+  "scripts": {
+    "lint": "eslint */**/*.{js,ts} --quiet --fix"
   }
+
 }

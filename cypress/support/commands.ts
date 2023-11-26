@@ -9,6 +9,7 @@ const SEARCH_RESULT_URL = '/catalogsearch/result';
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Cypress {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     interface Chainable<Subject> {
       visitUrl(pageName: string): void,
       savedSearchFor(query: string): void,
