@@ -12,7 +12,7 @@ describe('Search Suggestions', () => {
         }
       ).as('suggestions')
 
-      cy.visit('https://magento.softwaretestingboard.com')
+      cy.visitPage('');
 
       cy.log('typing search criteria...');
 
